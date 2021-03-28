@@ -9,5 +9,5 @@ echo $b
 read -p "Enter Value Of c:" c
 echo $c
 
-
-
+result1=$(( $a + $b * $c ))
+echo  $result1
