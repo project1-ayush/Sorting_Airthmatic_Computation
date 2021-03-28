@@ -1,5 +1,10 @@
 #|/bin/bash -x
 
+i=0
+MAXCOUNT=4
+
+declare -A Results
+
 read -p "Enter Value Of a:" a
 echo $a
 
@@ -22,5 +27,9 @@ result4=$(( $a % $b + $c ))
 echo  $result4
 
 
+Results[one]=$result1
+Results[two]=$result2
+Results[three]=$result3
+Results[four]=$result4
 
-
+echo "Result Of Airthmatic Problem" ${Results[@]}
