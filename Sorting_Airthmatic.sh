@@ -1,9 +1,8 @@
 #|/bin/bash -x
 
-i=0
-MAXCOUNT=4
+count=0
 
-declare -A Results
+declare -a Results
 
 read -p "Enter Value Of a:" a
 echo $a
@@ -26,10 +25,10 @@ echo  $result3
 result4=$(( $a % $b + $c ))
 echo  $result4
 
-
-Results[one]=$result1
-Results[two]=$result2
-Results[three]=$result3
-Results[four]=$result4
+Results[((count++))]=$result1
+Results[((count++))]=$result2
+Results[((count++))]=$result3
+Results[((count++))]=$result4
 
 echo "Result Of Airthmatic Problem" ${Results[@]}
+echo "Index Of Result Of Airthmatic Problem" ${!Results[@]}
